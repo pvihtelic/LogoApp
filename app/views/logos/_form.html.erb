@@ -1,0 +1,12 @@
+<%= form_for @logo do |logo| %>
+
+	 <%= logo.label :url, "Enter Logo URL:" %>
+	 <%= logo.text_field :url, :size=>75 %>
+
+	 <%= logo.label :title, "Title of Logo:" %>
+	 <%= logo.text_field :title, :size=>75 %>
+
+	 <%= logo.submit %>
+	 <%= link_to "Home", logos_url %>
+
+<% end %>

@@ -1,0 +1,7 @@
+<h3><%= @logo.title %></h3>
+<nav>
+	<%= link_to "Edit", edit_logo_url(@logo.id) %>
+	<%= link_to "Delete", logo_url(@logo.id), :method=>"delete" %>
+</nav>
+<%= link_to "Back", logos_url %>
+<%= image_tag(@logo.url) %>

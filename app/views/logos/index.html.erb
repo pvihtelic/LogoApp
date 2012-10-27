@@ -1,0 +1,14 @@
+<h1>Logo Gallery</h1>
+
+<%= link_to "Add a New Logo", new_logo_url %>
+
+<ul>
+<% @logos.each do |logo| %>
+	<li>
+		<%= link_to image_tag(logo.url, :width=>200), logo_url(logo.id) %>
+		<%= link_to "Edit", edit_logo_url(logo.id) %>
+		<%= link_to "Delete", logo_url(logo.id), :method=>"delete" %>
+	</li>	
+<% end %>
+</ul>
+	
